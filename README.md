@@ -6,12 +6,8 @@
 
 | Name | GitHub username | Role |
 | --- | --- | --- |
-| _Member 1_ | _@username_ | _see CONTRIBUTIONS.md_ |
-| _Member 2_ | _@username_ | |
-| _Member 3_ | _@username_ | |
-| _Member 4_ | _@username_ | |
-
-> Replace the placeholders above with your real names and GitHub accounts before submitting.
+| Jacquelyn D. Sangalang | @jacquelynsangalang546-coder | Lead Developer |
+| Mikaella D. Tarine | Not yet registered | Quality Assurance and Documentation |
 
 ---
 
