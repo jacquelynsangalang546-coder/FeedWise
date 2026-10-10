@@ -1,0 +1,124 @@
+@import 'tailwindcss';
+
+/*
+  FeedWise theme
+  pasture  - deep field green used for the navigation and headings
+  leaf     - primary action green
+  grain    - feed-sack yellow accent (low-stock warnings, active nav)
+  barn     - barn red for danger / out of stock
+  canvas   - cool sage-tinted app background
+*/
+@theme {
+  --font-sans: 'Public Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Bricolage Grotesque', 'Public Sans', ui-sans-serif, sans-serif;
+
+  --color-canvas: #f1f4ef;
+  --color-surface: #ffffff;
+  --color-line: #dfe5dc;
+
+  --color-ink-900: #1d2620;
+  --color-ink-700: #3a463e;
+  --color-ink-500: #637068;
+  --color-ink-400: #87928b;
+  --color-ink-300: #b3bdb6;
+
+  --color-pasture-50: #ebf3ee;
+  --color-pasture-100: #d4e6da;
+  --color-pasture-700: #1f4a35;
+  --color-pasture-800: #1a4130;
+  --color-pasture-900: #173a2a;
+  --color-pasture-950: #102a1e;
+
+  --color-leaf-50: #ecf7f0;
+  --color-leaf-100: #d2eedc;
+  --color-leaf-500: #38935e;
+  --color-leaf-600: #2e7d4f;
+  --color-leaf-700: #256641;
+
+  --color-grain-50: #fdf7e6;
+  --color-grain-100: #fbecc0;
+  --color-grain-300: #f6d27a;
+  --color-grain-400: #f2c14e;
+  --color-grain-600: #b88512;
+  --color-grain-700: #8f6610;
+
+  --color-barn-50: #fbeeec;
+  --color-barn-100: #f5d6d1;
+  --color-barn-500: #c44a36;
+  --color-barn-600: #b4412f;
+  --color-barn-700: #8f3325;
+
+  --shadow-card: 0 1px 2px rgb(29 38 32 / 0.05), 0 6px 20px -8px rgb(29 38 32 / 0.12);
+  --shadow-pop: 0 18px 50px -12px rgb(16 42 30 / 0.35);
+
+  --animate-toast-in: toast-in 220ms ease-out;
+  --animate-fade-in: fade-in 160ms ease-out;
+  --animate-sheet-in: sheet-in 220ms ease-out;
+
+  @keyframes toast-in {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes sheet-in {
+    from {
+      opacity: 0;
+      transform: translateY(12px) scale(0.98);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    @apply bg-canvas text-ink-900 font-sans antialiased;
+  }
+  h1,
+  h2,
+  h3 {
+    @apply font-display tracking-tight;
+  }
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-leaf-600;
+  }
+  input[type='number']::-webkit-inner-spin-button,
+  input[type='number']::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type='number'] {
+    -moz-appearance: textfield;
+  }
+}
+
+@utility tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 1ms !important;
+    transition-duration: 1ms !important;
+  }
+}
