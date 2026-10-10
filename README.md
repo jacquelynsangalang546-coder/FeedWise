@@ -7,7 +7,7 @@
 | Name | GitHub username | Role |
 | --- | --- | --- |
 | Jacquelyn D. Sangalang | @jacquelynsangalang546-coder | Lead Developer |
-| Mikaella D. Tarine | Not yet registered | Quality Assurance and Documentation |
+| Mikaella D. Tarine | mikaellatrn| Quality Assurance and Documentation |
 
 ---
 
